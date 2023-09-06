@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class RewardHandling : MonoBehaviour
 {
+    public TextMeshProUGUI rewardText;
     public int _score;
+
     public string[] variantsRewardStr;
     public int[] variantsRewardInt;
 
@@ -32,8 +36,7 @@ public class RewardHandling : MonoBehaviour
             }
             else
             {
-                Debug.Log($"i - {i}, score - {_score}");
-                Debug.Log(variantsRewardStr[i]);
+                rewardText.text = variantsRewardStr[i];
                 break;
             }
         }
